@@ -14,17 +14,12 @@ import { Link, useNavigate } from "react-router-dom";
 import "./styles.css";
 import models from "../../modelData/models";
 
-/**
- * Định nghĩa UserList, một component React của Project 4.
- * Component này cung cấp điều hướng đến tất cả người dùng trong hệ thống.
- */
+
 function UserList() {
   const users = models.userListModel();
   const navigate = useNavigate();
   
-  /**
-   * Xử lý khi nhấp vào một mục danh sách người dùng
-   */
+  
   const handleUserClick = (userId) => {
     navigate(`/users/${userId}`);
   };
@@ -71,9 +66,6 @@ function UserList() {
   );
 }
 
-/**
- * Tạo màu dựa trên chuỗi
- */
 function stringToColor(string) {
   let hash = 0;
   for (let i = 0; i < string.length; i++) {
